@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Student } from './student.model';
 
 @Component({
   selector: 'jad-student',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
  
-  name: string = 'Luke';
-  isJedi: boolean = true;
+  @Input() student: Student;
+  @Output() myEvent = new EventEmitter; 
+ 
+
   //PROPERTY BINDING
   //ONE-WAY BINDING
   //No componente ts
@@ -17,13 +20,17 @@ export class StudentComponent implements OnInit {
   //   isJedi: true
   // };
 
-
   //No Html
   //<input type='text' [value]="user.name">
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
+  }
+
+  clicked(): void{    
+    this.myEvent.emit();
+    console.log(`Student: ${this.student.img}`);
   }
 
 }

@@ -1,1 +1,3 @@
-<jad-student></jad-student>
+<section>
+    <jad-student (myEvent)="willBeCalled()" *ngFor="let student of students" [student]="student"></jad-student>
+</section>

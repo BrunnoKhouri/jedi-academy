@@ -1,6 +1,15 @@
-<div>
-  Stutant:{{name}}
-  <div [hidden]="!isJedi">
-    Jedi Temple: Coruscant
-  </div>
+<div class="card">
+  <div class="content">
+    <img src="{{student?.img}}" alt="Jedis" width="100%">    
+    <div class="content-name">
+      <span>Stutant: <a href="#" (click)="clicked()">{{student?.name}}</a></span>        
+     </div>  
+     <div *ngIf="student.isJedi">
+      <span>Jedi Temple:</span> {{student?.temple}}
+     </div>
+     <div *ngIf="student.isJedi" class="content-saber">
+      <span>Lightsaber:</span> 
+      <div class="saber"></div> 
+    </div> 
+  </div> 
 </div>

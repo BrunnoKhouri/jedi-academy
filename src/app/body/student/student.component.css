@@ -1,0 +1,41 @@
+.card {
+    box-shadow: 0 4px 8px #0000;
+    transition: 0.3s;
+    width: 500px;
+    background-color: white;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.saber {
+    border-radius: 10px;
+    width: 301px;
+    height: 15px;
+    box-shadow: 0 0 5px #04f45b, 0 0 2px #04f45b, 0 0 23px #04f45b, 0 0 81px #00f95b;
+    background: #bfffc1b0;
+    margin-left: 3%;
+
+}
+
+.content {
+    padding: 20px;
+}
+
+.content-name {
+    display: flex;
+    margin: 4% 0%;
+}
+
+span {
+    font-weight: 700;
+}
+
+
+.content-saber {
+    display: flex;
+    margin: 4% 0%;
+}
